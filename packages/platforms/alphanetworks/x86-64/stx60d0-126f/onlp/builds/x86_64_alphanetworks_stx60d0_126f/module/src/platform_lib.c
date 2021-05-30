@@ -33,7 +33,7 @@
 #include <AIM/aim.h>
 #include <onlp/platformi/sfpi.h>
 #include "platform_lib.h"
-#include <linux/i2c-dev.h>
+#include <i2c/smbus.h>
 
 #define DEBUG_FLAG 0
 
