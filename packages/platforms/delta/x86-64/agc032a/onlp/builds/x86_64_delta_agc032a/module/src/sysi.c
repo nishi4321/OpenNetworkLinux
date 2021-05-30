@@ -484,7 +484,7 @@ int onlp_sysi_platform_info_get(onlp_platform_info_t *pi)
 {
     int rv = 0, cpld_idx = 0;
     uint8_t cpld_version[cpld_list_size];
-    char buffer[256] = "";
+    char buffer[65536] = "";
 
     void *busDrv = NULL;
     cpld_dev_driver_t *cpld = (cpld_dev_driver_t *)vendor_find_driver_by_name("CPLD");
@@ -509,7 +509,7 @@ int onlp_sysi_platform_info_get(onlp_platform_info_t *pi)
             return ONLP_STATUS_E_INTERNAL;
         }
 
-        char tmpBuffer[256] = "";
+        char tmpBuffer[65536] = "";
         strcpy(tmpBuffer, buffer);
         sprintf(buffer, "%s \n\t\t%s: 0x%02x ", tmpBuffer, cpld_version_list[cpld_idx].name, cpld_version[cpld_idx]);
         // sprintf(buffer, "%s \n\t\t%s: 0x%02x ", buffer, cpld_version_list[cpld_idx].name, cpld_version[cpld_idx]);
