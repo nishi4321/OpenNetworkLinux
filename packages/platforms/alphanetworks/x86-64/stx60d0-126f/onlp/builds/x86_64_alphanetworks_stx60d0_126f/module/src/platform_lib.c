@@ -24,6 +24,7 @@
  *
  ***********************************************************/
 #include <sys/mman.h>
+#include <sys/ioctl.h>
 #include <errno.h>
 #include <string.h>
 #include <stdio.h>
@@ -32,6 +33,7 @@
 #include <AIM/aim.h>
 #include <onlp/platformi/sfpi.h>
 #include "platform_lib.h"
+#include <linux/i2c.h>
 
 #define DEBUG_FLAG 0
 
