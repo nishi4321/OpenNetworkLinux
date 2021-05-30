@@ -31,5 +31,6 @@ onlplib_DEPENDMODULE_ENTRIES := init:onlplib
 ifeq ($(ONL_DEBIAN_SUITE),buster)
 GLOBAL_CFLAGS += -DONLPLIB_CONFIG_I2C_INCLUDE_SMBUS=1
 GLOBAL_CFLAGS += -Wno-implicit-function-declaration
+GLOBAL_CFLAGS += -Wno-restrict
 GLOBAL_LINK_LIBS += -li2c
 endif
